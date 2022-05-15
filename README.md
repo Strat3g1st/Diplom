@@ -6,7 +6,7 @@ CRA: https://github.com/Atlas200dk/sample-imageinpainting-HiFill
 
 HII: https://github.com/GouravWadhwa/Hypergraphs-Image-Inpainting
 
-Заменить все test.py в этих методах на redacted версии из репозитория НИРС. Для запуска использовать параметры из DFN_param.txt, HII_param.txt, CRA_param.txt. Причем CRA_param.txt - это переменные в самом исходном коде test.py. Для HII использованные параметры в виде conf_<name>.txt - прилагаются в репозитории. Сгенерировать заново с заданными путями их можно с помощью conf_gen.py В случае CRA использовался код в папке GPU_CPU.
+Заменить все test.py в этих методах на redacted версии из репозитория НИРС. Для запуска использовать параметры из DFN_param.txt, HII_param.txt, CRA_param.txt. Причем CRA_param.txt - это переменные в самом исходном коде test.py. Для HII использованные параметры в виде conf_<name>.txt - прилагаются в репозитории. Сгенерировать заново с заданными путями их можно с помощью conf_gen.py В случае CRA использовался код в папке GPU_CPU. Также как и в НИРС надо заменить версии кода методов на отредактированные в репозитории.
 
 Запуск на GPU всех методов проходит успешно.
 
