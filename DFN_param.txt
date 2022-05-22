@@ -1,0 +1,19 @@
+--model model\\model_places2.pth 
+--img C:\\Users\\maste\\Documents\\objects_add\\mantis\\images
+--mask C:\\Users\\maste\\Documents\\objects_add\\mantis\\masks
+--output C:\\Users\\maste\\Documents\\objects_add\\mantis\\DFN
+
+--model model\\model_places2.pth 
+--img C:\\Users\\maste\\Documents\\objects_add\\mapple\\images
+--mask C:\\Users\\maste\\Documents\\objects_add\\mapple\\masks
+--output C:\\Users\\maste\\Documents\\objects_add\\mapple\\DFN
+
+--model model\\model_places2.pth 
+--img C:\\Users\\maste\\Documents\\objects_add\\vinca\\images
+--mask C:\\Users\\maste\\Documents\\objects_add\\vinca\\masks
+--output C:\\Users\\maste\\Documents\\objects_add\\vinca\\DFN
+
+--model model\\model_places2.pth 
+--img C:\\Users\\maste\\Documents\\objects_add\\wasp\\images
+--mask C:\\Users\\maste\\Documents\\objects_add\\wasp\\masks
+--output C:\\Users\\maste\\Documents\\objects_add\\wasp\\DFN

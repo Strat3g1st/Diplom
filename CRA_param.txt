@@ -1,0 +1,15 @@
+args.images = 'C:\\Users\\maste\\Documents\\objects_add\\mantis\\images'
+args.masks = 'C:\\Users\\maste\\Documents\\objects_add\\mantis\\masks'
+args.output_dir = 'C:\\Users\\maste\\Documents\\objects_add\\mantis\\CRA'
+
+args.images = 'C:\\Users\\maste\\Documents\\objects_add\\mapple\\images'
+args.masks = 'C:\\Users\\maste\\Documents\\objects_add\\mapple\\masks'
+args.output_dir = 'C:\\Users\\maste\\Documents\\objects_add\\mapple\\CRA'
+
+args.images = 'C:\\Users\\maste\\Documents\\objects_add\\vinca\\images'
+args.masks = 'C:\\Users\\maste\\Documents\\objects_add\\vinca\\masks'
+args.output_dir = 'C:\\Users\\maste\\Documents\\objects_add\\vinca\\CRA'
+
+args.images = 'C:\\Users\\maste\\Documents\\objects_add\\wasp\\images'
+args.masks = 'C:\\Users\\maste\\Documents\\objects_add\\wasp\\masks'
+args.output_dir = 'C:\\Users\\maste\\Documents\\objects_add\\wasp\\CRA'

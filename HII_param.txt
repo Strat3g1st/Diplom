@@ -1,0 +1,23 @@
+--dataset places2 --pretrained_model_dir places2\random
+--checkpoint_prefix places2_256x256_random_mask 
+--generate_mask 0 
+--test_file_path samples\conf_mantis.txt
+--test_dir C:\Users\maste\Documents\objects_add\mantis\HII
+
+--dataset places2 --pretrained_model_dir places2\random
+--checkpoint_prefix places2_256x256_random_mask 
+--generate_mask 0 
+--test_file_path samples\conf_mapple.txt
+--test_dir C:\Users\maste\Documents\objects_add\mapple\HII
+
+--dataset places2 --pretrained_model_dir places2\random
+--checkpoint_prefix places2_256x256_random_mask 
+--generate_mask 0 
+--test_file_path samples\conf_vinca.txt
+--test_dir C:\Users\maste\Documents\objects_add\vinca\HII
+
+--dataset places2 --pretrained_model_dir places2\random
+--checkpoint_prefix places2_256x256_random_mask 
+--generate_mask 0 
+--test_file_path samples\conf_wasp.txt
+--test_dir C:\Users\maste\Documents\objects_add\wasp\HII
