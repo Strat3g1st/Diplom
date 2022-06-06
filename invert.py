@@ -40,14 +40,8 @@ def apply_invert_to_all(path_mask):
         img_save(img, os.path.splitext(path)[0] + '.png')
 
 
-name_dir_data = "objects"
-path1 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\mantis\\masks\\"
-path2 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\mapple\\masks\\"
-path3 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\vinca\\masks\\"
-path4 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\wasp\\masks\\"
+name_dir_data = "dataset_samara"
+path1 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\masks37\\"
 
 
 apply_invert_to_all(path1)
-apply_invert_to_all(path2)
-apply_invert_to_all(path3)
-apply_invert_to_all(path4)

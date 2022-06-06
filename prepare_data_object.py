@@ -23,8 +23,8 @@ def format_to_256x256(path_old, path_new):
     img.save(path_new)
 
 
-path_old = "C:\\Users\\maste\\Documents\\objects_add\\"
-path_new = "C:\\Users\\maste\\Documents\\objects_add\\"
+path_old = "C:\\Users\\maste\\Documents\\objects\\"
+path_new = "C:\\Users\\maste\\Documents\\objects\\"
 
 mantis = "mantis\\"
 mapple = "mapple\\"
@@ -95,7 +95,7 @@ def apply_format_to_all():
             print(path_new + object + masks + name)
 
 
-create_dir()
+# create_dir()
 create_db()
 apply_format_to_all()
 

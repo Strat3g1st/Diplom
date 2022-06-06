@@ -13,17 +13,8 @@ def extract_final_images_from_HII(path):
         cv2.imwrite(name, img)
 
 
-name_dir_data = "objects_add"
-path1 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\mantis\\HII\\"
-path2 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\mapple\\HII\\"
-path3 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\vinca\\HII\\"
-path4 = "C:\\Users\\maste\\Documents\\" + name_dir_data + "\\wasp\\HII\\"
+name_dir_data = "dataset_samara\\"
+path = "C:\\Users\\maste\\Documents\\" + name_dir_data + "HII\\"
 
-extract_final_images_from_HII(path1)
+extract_final_images_from_HII(path)
 print('mantis formated')
-extract_final_images_from_HII(path2)
-print('mapple formated')
-extract_final_images_from_HII(path3)
-print('vinca formated')
-extract_final_images_from_HII(path4)
-print('wasp formated')

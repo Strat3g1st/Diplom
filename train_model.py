@@ -4,7 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from skimage.io import imread
 import matplotlib.pyplot as plt
-from decoder_32 import CNNNet
+from decoder_256 import CNNNet
 
 
 class SegmentationDataSet(Dataset):
@@ -77,8 +77,8 @@ def sort_special(method, lst, len):
 torch.cuda.device('cuda')
 torch.cuda.empty_cache()
 model = CNNNet()
-# model.load_state_dict(torch.load("model_unet_256_x3"))
-# model.eval()
+model.load_state_dict(torch.load("model_decoder_256_x5"))
+model.eval()
 model.cuda()
 
 transforms = transforms.Compose([
@@ -87,29 +87,29 @@ transforms = transforms.Compose([
 ])
 
 learning_rate = 1e-4
-batch_size = 50
+batch_size = 30
 epochs = 50
 
-N = 72000
-path_to_images = "C:\\Users\\Admin\\Documents\\dataset_object\\images\\"
-path_to_masks = "C:\\Users\\Admin\\Documents\\dataset_object\\targets\\"
+N = 480
+path_to_images = "C:\\Users\\Admin\\Documents\\dataset_samara\\images\\"
+path_to_masks = "C:\\Users\\Admin\\Documents\\dataset_samara\\targets\\"
 inputs = os.listdir(path_to_images)
 targets = os.listdir(path_to_masks)
 inputs = sorted(inputs, key=lambda x: int(os.path.splitext(x)[0]))
 targets = sorted(targets, key=lambda x: int(os.path.splitext(x)[0]))
-inputs = inputs[:int(N/2)]
-targets = targets[:int(N/2)]
+# inputs = inputs[:int(N/2)]
+# targets = targets[:int(N/2)]
 inputs = [path_to_images + file for file in inputs]
 targets = [path_to_masks + file for file in targets]
 CRA = 0
 DFN = 1
 HII = 2
-inputs_CRA = sort_special(CRA, inputs, int(N/2))
-targets_CRA = sort_special(CRA, targets, int(N/2))
-inputs_DFN = sort_special(DFN, inputs, int(N/2))
-targets_DFN = sort_special(DFN, targets, int(N/2))
-inputs_HII = sort_special(HII, inputs, int(N/2))
-targets_HII = sort_special(HII, targets, int(N/2))
+inputs_CRA = sort_special(CRA, inputs, N)
+targets_CRA = sort_special(CRA, targets, N)
+inputs_DFN = sort_special(DFN, inputs, N)
+targets_DFN = sort_special(DFN, targets, N)
+inputs_HII = sort_special(HII, inputs, N)
+targets_HII = sort_special(HII, targets, N)
 training_dataset = SegmentationDataSet(inputs=inputs_HII, targets=targets_HII, transform=None)
 training_dataloader = DataLoader(dataset=training_dataset, batch_size=batch_size, shuffle=True)
 
@@ -119,7 +119,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 print("start learning")
 train(model, optimizer, loss_fn, training_dataloader, epochs=epochs)
 
-torch.save(model.state_dict(), "model_decoder_32_x5_HII")
+torch.save(model.state_dict(), "model_decoder_256_samara_extlearn")
 
 plt.plot(range(0, len(losses)), losses, label='losses value')
 plt.legend()
